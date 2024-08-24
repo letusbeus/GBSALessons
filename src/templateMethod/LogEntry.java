@@ -4,7 +4,7 @@ package templateMethod;
  * Запись лога
  */
 
-class LogEntry {
+public class LogEntry {
     private String text;
 
     public String getText() {
