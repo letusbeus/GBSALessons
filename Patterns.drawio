@@ -1,0 +1,164 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Страница — 1" id="dRKApWeLOeAb9wOq97Hy">
+    <mxGraphModel dx="1687" dy="984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PWCoalBop2xfm6QltFLC-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Template Method&lt;/h1&gt;&lt;p&gt;Диаграмма классов паттерна &quot;Шаблонный метод&quot;.&lt;/p&gt;&lt;p&gt;# - защищенный метод&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-2" value="AbsrtactClass" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-3" value="+ TemplateMethod()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-2">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-4" value="# PrimitiveOperation1()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-2">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-5" value="# PrimitiveOperation2()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-2">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endSize=12;endArrow=block;endFill=0;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-6" target="PWCoalBop2xfm6QltFLC-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="200" />
+              <mxPoint x="570" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-13" value="Extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-12">
+          <mxGeometry x="-0.0053" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-6" value="ConcreteClass" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="260" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-7" value="+ TemplateMethod()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-6">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-8" value="# PrimitiveOperation1()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-6">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-9" value="# PrimitiveOperation2()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-6">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-14" value="void TemplateMethod(){&lt;div&gt;PrimitiveOperation();&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;PromotoveOperation();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="200" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.143;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-14" target="PWCoalBop2xfm6QltFLC-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="285" />
+              <mxPoint x="430" y="200" />
+              <mxPoint x="520" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-16" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Factory Method&lt;/h1&gt;&lt;p&gt;Диаграмма классов паттерна &quot;Фабричный метод&quot;.&lt;/p&gt;&lt;p&gt;# - защищенный метод&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-17" value="AbsrtactClassCreator" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="489" y="492" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-18" value="+ AnOperation()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-17">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-19" value="# FactoryMethod(): Product" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-17">
+          <mxGeometry y="52" width="140" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-22" value="Product" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="521" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-26" value="Product AnOperation(){&lt;div&gt;...&lt;/div&gt;&lt;div&gt;Product product = FactoryMethod();&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;return product;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="818" y="478" width="240" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-31" value="ConcreteClassCreator" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="681" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-33" value="# FactoryMethod(): Product" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWCoalBop2xfm6QltFLC-31">
+          <mxGeometry y="26" width="140" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=-0.001;entryY=0.508;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-17" target="PWCoalBop2xfm6QltFLC-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="537" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;entryX=0.997;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-17" target="PWCoalBop2xfm6QltFLC-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-38" value="Use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-37">
+          <mxGeometry x="-0.0171" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="573" as="targetPoint" />
+            <mxPoint x="160" y="622" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-55" value="Extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-52">
+          <mxGeometry x="-0.5289" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-39" value="ConcreteProduct#1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="596" width="130" height="52" as="geometry">
+            <mxRectangle x="160" y="600" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="573" as="targetPoint" />
+            <mxPoint x="160" y="705.0232558139537" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-56" value="Extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-53">
+          <mxGeometry x="-0.7407" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-40" value="ConcreteProduct#2" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="679" width="130" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="573" as="targetPoint" />
+            <mxPoint x="160" y="782" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-57" value="Extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-54">
+          <mxGeometry x="-0.8131" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-41" value="ConcreteProduct#3" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="756" width="130" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.502;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;endSize=12;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-31" target="PWCoalBop2xfm6QltFLC-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-45" value="Extends" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PWCoalBop2xfm6QltFLC-44">
+          <mxGeometry x="0.0259" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-61" value="Product AnOperation(){&lt;div&gt;...&lt;/div&gt;&lt;div&gt;Product product = FactoryMethod();&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;return product;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="818" y="638" width="240" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="PWCoalBop2xfm6QltFLC-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.713;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="PWCoalBop2xfm6QltFLC-33" target="PWCoalBop2xfm6QltFLC-61">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="725" />
+              <mxPoint x="680" y="725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
