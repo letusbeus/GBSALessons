@@ -1,5 +1,9 @@
 package car;
 
+import java.awt.*;
+
+import static car.FuelType.Diesel;
+
 public class Program {
 
     /**
@@ -31,5 +35,20 @@ public class Program {
      */
     public static void main(String[] args) {
 
+        Harvester harvester = new Harvester("Tesla", "Cybertrack", Color.BLACK);
+
+        RefuelingStation refuelingStation = new RefuelingStation();
+        harvester.setRefuelingStation(refuelingStation);
+        harvester.fuel();
+
+    }
+
+    public static double calculateMaintenance(Car car) {
+        if (car.getWheelsCount() == 6) {
+            return 6 * 1500;
+        }
+        else {
+            return 4 * 1000;
+        }
     }
 }

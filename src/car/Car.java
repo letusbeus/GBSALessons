@@ -32,9 +32,17 @@ public abstract class Car {
     // Подметать улицу
 //    public abstract void sweeping();
 
-    public boolean switchFogLights(){
+    public boolean switchFogLights() {
         fogLights = !fogLights;
         return fogLights;
+    }
+
+    protected void setWheelsCount(int wheelsCount) {
+        this.wheelsCount = wheelsCount;
+    }
+
+    public int getWheelsCount() {
+        return wheelsCount;
     }
 
     // endregion
@@ -56,7 +64,7 @@ public abstract class Car {
     private int wheelsCount;
 
     // Тип топлива
-    private FuelType fuelType;
+    protected FuelType fuelType;
 
     // Тип коробки передач
     private GearboxType gearboxType;
