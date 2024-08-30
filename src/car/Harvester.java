@@ -10,6 +10,7 @@ public class Harvester extends Car implements Fueling, Wiping{
     public Harvester(String make, String model, Color color) {
         super(make, model, color);
         setWheelsCount(6);
+        this.fuelType = FuelType.Diesel;
     }
 
     public void setRefuelingStation(Refueling refuelingStation) {

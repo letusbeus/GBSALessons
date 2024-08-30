@@ -2,8 +2,6 @@ package car;
 
 import java.awt.*;
 
-import static car.FuelType.Diesel;
-
 public class Program {
 
     /**
