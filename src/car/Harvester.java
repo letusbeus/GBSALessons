@@ -15,6 +15,7 @@ public class Harvester extends Car implements Fueling, Wiping{
 
     public void setRefuelingStation(Refueling refuelingStation) {
         this.refueling = refuelingStation;
+        System.out.println("Автомобиль едет на заправку.");
     }
 
     /**
@@ -58,16 +59,16 @@ public class Harvester extends Car implements Fueling, Wiping{
 
     @Override
     public void wipMirrors() {
-
+        System.out.println("Зеркала снова чистые.");
     }
 
     @Override
     public void wipWindshield() {
-
+        System.out.println("Лобовое стекло сияет.");
     }
 
     @Override
     public void wipHeadlights() {
-
+        System.out.println("Фары протерты.");
     }
 }

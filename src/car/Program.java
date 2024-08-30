@@ -38,7 +38,11 @@ public class Program {
         RefuelingStation refuelingStation = new RefuelingStation();
         harvester.setRefuelingStation(refuelingStation);
         harvester.fuel();
-
+        harvester.wipHeadlights();
+        harvester.wipMirrors();
+        harvester.wipWindshield();
+        harvester.movement();
+        System.out.printf("Ремонт %d колес завершен. Стоимость составила %.2f у.е.%n", harvester.getWheelsCount(), calculateMaintenance(harvester));
     }
 
     public static double calculateMaintenance(Car car) {
