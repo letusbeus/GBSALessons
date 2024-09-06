@@ -1,7 +1,8 @@
+// Lesson five:
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
-
 
 public class Program {
 
@@ -23,7 +24,20 @@ public class Program {
 
 }
 
+/**
+ * UI
+ */
+interface UILayer{
 
+    void openProject(String fileName);
+    void showProjectSettings();
+    void saveProject();
+    void printAllModels();
+    void printAllTextures();
+    void renderAll();
+    void renderModel(int i);
+
+}
 
 /**
  * Business logical layer implementation
@@ -86,37 +100,6 @@ interface BusinessLogicalLayer {
 }
 
 /**
- * Database access layer interface
- */
-interface DatabaseAccess {
-    void addEntity(Entity entity);
-
-    void removeEntity(Entity entity);
-
-    Collection<Texture> getAllTextures();
-
-    Collection<Model3D> getAllModels();
-}
-
-/**
- * Database interface
- */
-interface Database {
-    void load();
-
-    void save();
-
-    Collection<Entity> getAll();
-}
-
-/**
- * Entity
- */
-interface Entity {
-    int getId();
-}
-
-/**
  * Database implementation
  */
 class EditorDatabaseAccess implements DatabaseAccess {
@@ -159,6 +142,19 @@ class EditorDatabaseAccess implements DatabaseAccess {
     public void removeEntity(Entity entity) {
         editorDatabase.getAll().remove(entity);
     }
+}
+
+/**
+ * Database access layer interface
+ */
+interface DatabaseAccess {
+    void addEntity(Entity entity);
+
+    void removeEntity(Entity entity);
+
+    Collection<Texture> getAllTextures();
+
+    Collection<Model3D> getAllModels();
 }
 
 /**
@@ -207,6 +203,24 @@ class EditorDatabase implements Database {
         entities.add(model3D);
     }
 
+}
+
+/**
+ * Database interface
+ */
+interface Database {
+    void load();
+
+    void save();
+
+    Collection<Entity> getAll();
+}
+
+/**
+ * Entity
+ */
+interface Entity {
+    int getId();
 }
 
 /**
