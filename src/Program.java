@@ -41,14 +41,14 @@ public class Program {
                 try {
                     switch (no) {
                         case 0:
-                            System.out.println("Завершение работы приложения");
+                            System.out.println("Shutting down the application");
                             f = false;
                             break;
                         case 1:
-                            System.out.print("Укажите наименование файла проекта: ");
+                            System.out.print("Specify the name of the project file: ");
                             String fileName = scanner.nextLine();
                             editor3D.openProject(fileName);
-                            System.out.println("Проект успешно открыт.");
+                            System.out.println("The project has been successfully opened.");
                             break;
                         case 3:
                             editor3D.showProjectSettings();
@@ -63,17 +63,17 @@ public class Program {
                             editor3D.renderAll();
                             break;
                         case 7:
-                            System.out.print("Укажите номер модели: ");
+                            System.out.print("Please provide model number: ");
                             if (scanner.hasNextInt()) {
                                 int modelNo = scanner.nextInt();
                                 scanner.nextLine();
                                 editor3D.renderModel(modelNo);
                             } else {
-                                System.out.println("Номер модели указан некорректно.");
+                                System.out.println("The model number is incorrect.");
                             }
                             break;
                         default:
-                            System.out.println("Укажите корректный пункт меню.");
+                            System.out.println("Please select a valid menu item.");
                     }
                 }
                 catch (Exception e) {
@@ -81,7 +81,7 @@ public class Program {
                 }
             }
             else {
-                System.out.println("Укажите корректный пункт меню.");
+                System.out.println("Please select a valid menu item.");
                 scanner.nextLine();
             }
 
