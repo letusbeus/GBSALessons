@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.Random;
+
 
 public class Program {
 
@@ -16,14 +17,163 @@ public class Program {
      * - Предложить варианты связывания всех уровней – сценарии использования. 3-4 сценария.
      * - Сквозная функция – создать новую 3D модель, сделать рендер для печати на принтере...
      */
-
     public static void main(String[] args) {
 
     }
+
 }
 
 
+
+/**
+ * Business logical layer implementation
+ */
+class EditorBusinessLogicalLayer implements BusinessLogicalLayer{
+
+    private DatabaseAccess databaseAccess;
+
+
+    public EditorBusinessLogicalLayer(DatabaseAccess databaseAccess) {
+        this.databaseAccess = databaseAccess;
+    }
+
+    @Override
+    public Collection<Model3D> getAllModels() {
+        return databaseAccess.getAllModels();
+    }
+
+    @Override
+    public Collection<Texture> getAllTextures() {
+        return databaseAccess.getAllTextures();
+    }
+
+    @Override
+    public void renderModel(Model3D model) {
+        processRender(model);
+    }
+
+    @Override
+    public void renderAllModels() {
+        for (Model3D model : getAllModels())
+            processRender(model);
+    }
+
+    private Random random = new Random();
+
+    private void processRender(Model3D model){
+        try
+        {
+            Thread.sleep(2500 - random.nextInt(2000));
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+
+/**
+ * Business logical layer interface
+ */
+interface BusinessLogicalLayer {
+    Collection<Model3D> getAllModels();
+
+    Collection<Texture> getAllTextures();
+
+    void renderModel(Model3D model);
+
+    void renderAllModels();
+}
+
+/**
+ * Database access layer interface
+ */
+interface DatabaseAccess {
+    void addEntity(Entity entity);
+
+    void removeEntity(Entity entity);
+
+    Collection<Texture> getAllTextures();
+
+    Collection<Model3D> getAllModels();
+}
+
+/**
+ * Database interface
+ */
+interface Database {
+    void load();
+
+    void save();
+
+    Collection<Entity> getAll();
+}
+
+/**
+ * Entity
+ */
+interface Entity {
+    int getId();
+}
+
+/**
+ * Database implementation
+ */
+class EditorDatabaseAccess implements DatabaseAccess {
+
+    private final Database editorDatabase;
+
+    public EditorDatabaseAccess(Database editorDatabase) {
+        this.editorDatabase = editorDatabase;
+    }
+
+    @Override
+    public Collection<Model3D> getAllModels() {
+        Collection<Model3D> models = new ArrayList<>();
+        for (Entity entity : editorDatabase.getAll()) {
+            if (entity instanceof Model3D) {
+                models.add((Model3D) entity);
+            }
+        }
+        return models;
+    }
+
+    @Override
+    public Collection<Texture> getAllTextures() {
+        Collection<Texture> textures = new ArrayList<>();
+        for (Entity entity : editorDatabase.getAll()) {
+            if (entity instanceof Texture) {
+                textures.add((Texture) entity);
+            }
+        }
+        return textures;
+    }
+
+
+    @Override
+    public void addEntity(Entity entity) {
+        editorDatabase.getAll().add(entity);
+    }
+
+    @Override
+    public void removeEntity(Entity entity) {
+        editorDatabase.getAll().remove(entity);
+    }
+}
+
+/**
+ * Database
+ **/
 class EditorDatabase implements Database {
+
+    private final ProjectFile projectFile;
+    private final Random random = new Random();
+    private Collection<Entity> entities;
+
+    public EditorDatabase(ProjectFile projectFile) {
+        this.projectFile = projectFile;
+        load();
+    }
 
     @Override
     public void load() {
@@ -34,15 +184,29 @@ class EditorDatabase implements Database {
     public void save() {
         //TODO: Saving the current state of all project entities (models, textures, etc.)
     }
-}
 
-/**
- * Database interface
- */
-interface Database {
-    void load();
+    public Collection<Entity> getAll() {
+        if (entities == null) {
+            entities = new ArrayList<>();
+            int entCount = random.nextInt(5, 11);
+            for (int i = 0; i < entCount; i++) {
+                generateModelAndTextures();
+            }
+        }
+        return entities;
+    }
 
-    void save();
+    private void generateModelAndTextures() {
+        Model3D model3D = new Model3D();
+        int txCount = random.nextInt(3);
+        for (int i = 0; i < txCount; i++) {
+            Texture texture = new Texture();
+            model3D.getTextures().add(texture);
+            entities.add(texture);
+        }
+        entities.add(model3D);
+    }
+
 }
 
 /**
@@ -50,14 +214,9 @@ interface Database {
  */
 class Model3D implements Entity {
     private static int counter = 10000;
-    private int id;
+    private final int id;
 
     private Collection<Texture> textures = new ArrayList<>();
-
-    @Override
-    public int getId() {
-        return id;
-    }
 
     {
         id = ++counter;
@@ -68,6 +227,11 @@ class Model3D implements Entity {
 
     public Model3D(Collection<Texture> textures) {
         this.textures = textures;
+    }
+
+    @Override
+    public int getId() {
+        return id;
     }
 
     public Collection<Texture> getTextures() {
@@ -86,7 +250,7 @@ class Model3D implements Entity {
 class Texture implements Entity {
     private static int counter = 50000;
 
-    private int id;
+    private final int id;
 
     {
         id = ++counter;
@@ -104,20 +268,13 @@ class Texture implements Entity {
 }
 
 /**
- * Entity
- */
-interface Entity {
-    int getId();
-}
-
-/**
  * Project file
  */
 class ProjectFile {
-    private String fileName;
-    private int setting1;
-    private String setting2;
-    private boolean setting3;
+    private final String fileName;
+    private final int setting1;
+    private final String setting2;
+    private final boolean setting3;
 
     public ProjectFile(String fileName) {
         this.fileName = fileName;
